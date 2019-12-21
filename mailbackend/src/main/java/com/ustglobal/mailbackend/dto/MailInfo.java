@@ -15,15 +15,15 @@ public class MailInfo {
 	@GeneratedValue
 	private int id;
 	@Column
-	private int From_id;
+	private int from_id;
 	@Column
-	private int To_id;
+	private int to_id;
 	@Column
-	private String Subject;
+	private String subject;
 	@Column
-	private String Message;
+	private String message;
 	@Column
-	private String Status;
+	private String status;
 	public int getId() {
 		return id;
 	}
@@ -31,36 +31,34 @@ public class MailInfo {
 		this.id = id;
 	}
 	public int getFrom_id() {
-		return From_id;
+		return from_id;
 	}
 	public void setFrom_id(int from_id) {
-		From_id = from_id;
+		this.from_id = from_id;
 	}
 	public int getTo_id() {
-		return To_id;
+		return to_id;
 	}
 	public void setTo_id(int to_id) {
-		To_id = to_id;
+		this.to_id = to_id;
 	}
 	public String getSubject() {
-		return Subject;
+		return subject;
 	}
 	public void setSubject(String subject) {
-		Subject = subject;
+		this.subject = subject;
 	}
 	public String getMessage() {
-		return Message;
+		return message;
 	}
 	public void setMessage(String message) {
-		Message = message;
+		this.message = message;
 	}
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
-	
-	
 
 }

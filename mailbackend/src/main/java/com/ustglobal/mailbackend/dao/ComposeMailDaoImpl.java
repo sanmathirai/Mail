@@ -16,6 +16,7 @@ public class ComposeMailDaoImpl implements ComposeMailDao {
 
 	@PersistenceUnit
 	private EntityManagerFactory factory;
+	
 	@Override
 	public boolean compose(MailInfo mailbean) {
 		EntityManager manager = factory.createEntityManager();

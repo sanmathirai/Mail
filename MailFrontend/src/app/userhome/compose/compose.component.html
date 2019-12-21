@@ -22,48 +22,48 @@
             
 
 <div class="alert alert-success mt-5" *ngIf='msg' >{{msg}}</div>
-<form action="" class="col-md-12 offset-4 mt-5 mb-5 card card-body" #form="ngForm"  (ngSubmit)="addProduct(form)">
+<form action="" class="col-md-12 offset-4 mt-5 mb-5 card card-body" #form="ngForm"  (ngSubmit)="compose(form)">
     <h1 class="text-center bg-white mb-5">Compose</h1>
     
     <div class="form-group">
         <label>From id</label>
-        <input type="number" name="id" id="id" class="form-control"  #id="ngModel" ngModel required maxlength="25" title="maximum length 25 characters" disabled>
-        <div *ngIf="id.touched && id.invalid">
-            <p *ngIf="id.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
+        <input type="number" name="from_id" id="from_id" class="form-control"  #from_id="ngModel" ngModel required maxlength="25" title="maximum length 25 characters" >
+        <div *ngIf="from_id.touched && from_id.invalid">
+            <p *ngIf="from_id.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
         </div>
-        <div *ngIf="id.touched && id.invalid">
-            <p *ngIf="id.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
+        <div *ngIf="from_id.touched && from_id.invalid">
+            <p *ngIf="from_id.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
         </div>
     </div>
     <div class="form-group">
         <label>To id</label>
-        <input type="number" name="id" id="id" class="form-control"  #id="ngModel" ngModel required maxlength="25" title="maximum length 25 characters" disabled>
-        <div *ngIf="id.touched && id.invalid">
-            <p *ngIf="id.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
+        <input type="number" name="to_id" id="to_id" class="form-control"  #to_id="ngModel" ngModel required maxlength="25" title="maximum length 25 characters" >
+        <div *ngIf="to_id.touched && to_id.invalid">
+            <p *ngIf="to_id.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
         </div>
-        <div *ngIf="id.touched && id.invalid">
-            <p *ngIf="id.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
+        <div *ngIf="to_id.touched && to_id.invalid">
+            <p *ngIf="to_id.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
         </div>
     </div>
     
     <label>Subject</label>
     <div class="form-group">
-        <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Username..." #user_name="ngModel" ngModel required maxlength="25" title="maximum length 25 characters" pattern="([A-Za-z\s]+){3,}">
-        <div *ngIf="user_name.touched && user_name.invalid">
-            <p *ngIf="user_name.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
+        <input type="subject" name="subject" id="subject" class="form-control" placeholder="Enter Username..." #subject="ngModel" ngModel required maxlength="25" title="maximum length 25 characters" pattern="([A-Za-z\s]+){3,}">
+        <div *ngIf="subject.touched && subject.invalid">
+            <p *ngIf="subject.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
         </div>
-        <div *ngIf="user_name.touched && user_name.invalid">
-            <p *ngIf="user_name.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
+        <div *ngIf="subject.touched && subject.invalid">
+            <p *ngIf="subject.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
         </div>
     </div>
     <label>Message</label>
     <div class="form-group">
-        <textarea name="user_name" id="user_name" class="form-control" placeholder="Enter Username..." #user_name="ngModel" ngModel required maxlength="25" rows="10" title="maximum length 25 characters" pattern="([A-Za-z\s]+){3,}"></textarea>
-        <div *ngIf="user_name.touched && user_name.invalid">
-            <p *ngIf="user_name.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
+        <input type="text" name="message" id="message" class="form-control" placeholder="Enter Username..." #message="ngModel" ngModel required maxlength="25" rows="10" title="maximum length 25 characters" pattern="([A-Za-z\s]+){3,}">
+        <div *ngIf="message.touched && message.invalid">
+            <p *ngIf="message.errors.required" class="alert alert-danger"> *Username is required maxlength is 20</p>
         </div>
-        <div *ngIf="user_name.touched && user_name.invalid">
-            <p *ngIf="user_name.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
+        <div *ngIf="message.touched && message.invalid">
+            <p *ngIf="message.errors.pattern" class="alert alert-danger"> *enter only characters min 3 and max 25</p>
         </div>
     </div>
     <div class="form-group">

@@ -19,9 +19,9 @@ msg;
     console.log(form.value);
     this.auth.registerUser(form.value)
     .subscribe(Data => {
-      this.msg = Data.description;
+      this.msg = Data.discription;
       console.log('Response after adding user', Data);
-      if (Data && Data.description === 'User Added') {
+      if (Data && Data.discription === 'Registration Done Successfully') {
         this.router.navigateByUrl('/register');
       } else {
         this.router.navigateByUrl('/register');
@@ -29,7 +29,7 @@ msg;
       form.reset();
     }, err => {
       console.log(err);
-      this.msg = err.Data.description;
+      this.msg = err.Data.discription;
     });
   }
 }

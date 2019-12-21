@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     this.auth.loginUser(form.value).subscribe(Data => {
       this.msg = Data.description;
       console.log('Response of login', Data);
-      if (Data && Data.description === 'Data Found') {
+      if (Data && Data.description === 'Login Successfully') {
         localStorage.setItem('userDetails', JSON.stringify(Data))
         this.router.navigateByUrl('/userhome');
       }

@@ -31,6 +31,7 @@ public class IndexController {
 		respon.setStatusecode(201);
 		respon.setMessge("sucess");
 		respon.setDiscription("mail are present");
+		respon.setMailb(info);
 	  }else{
 		  respon.setStatusecode(401);
 			respon.setMessge("failed");
